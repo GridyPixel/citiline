@@ -1,0 +1,15 @@
+
+
+// basics
+$base: 16px;
+
+// colors
+$clr-light: #FFFFFF;
+$clr-dark: #000000;
+
+$clr-bg: lighten( $clr-light, 30% );
+$clr-fg: lighten( $clr-dark, 15% );
+
+
+
+

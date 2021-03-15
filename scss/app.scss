@@ -1,0 +1,537 @@
+// variables
+@import 'variables';
+
+// mixins
+@import 'mixins';
+
+// ---------------------------------------
+// -- base
+// ---------------------------------------
+
+html, body {
+
+	background-color: $clr-bg;
+}
+
+// @include prefix((
+// border-radius: $base * .5,			
+// transform: translateX(-50%)	translateY(5px)	
+// ), webkit moz);
+
+// ---------------------------------------
+// -- city scene
+// ---------------------------------------
+
+#scene-wrapper {
+
+	position: relative;
+	display: block;
+	background: transparent;
+	overflow: hidden;	
+	width: 100%;
+	height: 100vh;
+}
+
+#scene-wrapper #scene {
+
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-end;
+	justify-content: center;
+	position: relative;
+	background: transparent;
+	overflow: hidden;
+	position: relative;	
+	width: 100%;
+	height: 100%;	
+
+	//
+	// -- section - land
+	//
+
+	#section-land {
+
+		position: relative;
+		display: block;
+		background-color: transparent;
+		width: 80%;
+		height: 10%;
+		border-top: 3px solid $clr-fg;	
+		order: 2;	
+	}
+
+	//
+	// -- section - city
+	//
+
+	#section-city {
+
+		position: relative;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		background-color: transparent;
+		width: 80%;
+		height: 90%;	
+		order: 1;
+
+		.view {
+
+			position: relative;
+			display: block;			
+			width: 20%;
+		}
+
+		.view .structure-proto {
+
+			position: absolute;
+			display: inline-block;
+			bottom: 0;		
+			border: 3px solid $clr-fg;
+			border-bottom: 0;
+			background-color: $clr-bg;
+			
+			@include prefix((
+				border-radius: $base * .2 $base * .2 0 0,							
+			), webkit moz);
+		}
+
+		// view : 01
+		.view#view-01 {
+			
+			//background-color: darken( $clr-bg, 10% );
+		}	
+
+		// view : 02
+		.view#view-02 {
+
+			z-index: 5;
+			//background-color: darken( $clr-bg, 2% );
+			margin-right: -6%;
+
+			// structure : 01
+			.structure-01 {
+
+				height: 30%;
+				width: 15%;
+				left: -7.5%;
+				z-index: 10;
+
+				// center structures
+
+				.center-structure {
+
+					position: relative;
+					display: inline-flex;
+					flex-flow: column nowrap;
+					//justify-content: space-evenly;
+					width: 100%;
+					height: 90%;
+					left: 0;
+					top: 0;
+					background-color: $clr-bg;					
+					z-index: 5;	
+
+					hr {
+
+						margin: 20% 0 0 0;					
+						height: 3px;
+						width: 100%;
+						background-color: $clr-fg;
+						opacity: 1;
+						@include prefix((
+							border-radius: 0,							
+						), webkit moz);
+
+						@for $i from 1 through 4 {
+
+							&:nth-child(5n - #{$i}) {
+								width: $i * 20%;
+							}
+						}
+					}				
+
+				}
+			}
+
+			// structure : 02
+			.structure-02 {
+
+				height: 50%;
+				width: 50%;
+				z-index: 5;
+
+				.rooftop-structure {
+
+					position: absolute;
+					display: inline-block;
+					width: 50%;
+					height: 6%;
+					left: 25%;
+					top: -6%;
+					background-color: darken( $clr-bg, 15% );
+					border: 3px solid $clr-fg;
+					@include prefix((
+						border-radius: $base * 10 $base * 10 $base * 4 $base * 4,							
+					), webkit moz);
+
+					&::before {
+
+						content: '';
+						position: absolute;
+						display: inline-block;
+						width: 3px;
+						height: 800%;
+						top: -800%;
+						left: 50%;
+						margin-left: -1.5px;
+						background-color: $clr-fg;
+					}
+
+					&::after {
+
+						content: '';
+						position: absolute;
+						display: inline-block;
+						width: 30%;
+						height: 3px;
+						top: -800%;
+						left: 50%;
+						margin-left: -15%;
+						background-color: $clr-fg;
+					}
+				}
+			}
+		}
+
+		// view : 03
+		.view#view-03 {
+
+			z-index: 10;
+			//background-color: darken( $clr-bg, 4% );
+			margin-right: -2%;
+
+			// structure : 01
+			.structure-01 {
+
+				height: 32%;
+				width: 60%;
+				left: -30%;
+				z-index: 10;
+
+				// center structures
+
+				.center-structure {
+
+					position: relative;
+					display: inline-flex;
+					flex-flow: column nowrap;
+					justify-content: space-evenly;
+					width: 70%;
+					height: 65%;
+					left: 15%;
+					top: 12%;
+					background-color: $clr-bg;
+					border-top: 3px solid $clr-fg;
+					border-bottom: 3px solid $clr-fg;
+					z-index: 5;	
+
+					hr {
+
+						margin: 0;					
+						height: 3px;
+						width: 100%;
+						background-color: $clr-fg;
+						opacity: 1;
+						@include prefix((
+							border-radius: 0,							
+						), webkit moz);
+					}			
+				}
+
+				// base structures
+
+				.base-structure {
+
+					position: absolute;
+					display: block;
+					bottom: 0;
+					left: 0;
+					height: 6%;
+					width: 100%;
+					background-color: darken( $clr-bg, 15% );
+					border-top: 3px solid $clr-fg;
+				}
+			}
+
+			// structure : 02
+			.structure-02 {
+
+				height: 60%;
+				width: 65%;
+				z-index: 5;
+
+				// center structures
+
+				.center-structure {
+
+					position: relative;
+					display: inline-flex;
+					flex-flow: row nowrap;
+					justify-content: space-evenly;
+					width: 70%;
+					height: 80%;
+					left: 15%;
+					top: 10%;
+					background-color: $clr-bg;
+					border-left: 3px solid $clr-fg;
+					border-right: 3px solid $clr-fg;
+					z-index: 5;	
+
+					hr {
+
+						margin: 0;					
+						height: 100%;
+						width: 3px;
+						background-color: $clr-fg;
+						opacity: 1;
+						@include prefix((
+							border-radius: $base * .2 $base * .2 0 0,							
+						), webkit moz);
+					}			
+				}
+			}
+
+			// structure : 03
+			.structure-03 {
+
+				height: 45%;
+				width: 30%;
+				z-index: 15;
+				left: 65%;
+				margin-left: -3px;
+
+				// center structures
+
+				.center-structure {
+
+					position: relative;
+					display: inline-flex;
+					flex-flow: column nowrap;
+					//justify-content: space-evenly;
+					width: 100%;
+					height: 90%;
+					left: 0;
+					top: 0;
+					background-color: $clr-bg;					
+					z-index: 5;	
+
+					hr {
+
+						margin: 15% 0 0 0;					
+						height: 3px;
+						width: 100%;
+						background-color: $clr-fg;
+						opacity: 1;
+						@include prefix((
+							border-radius: 0,							
+						), webkit moz);
+
+						@for $i from 1 through 4 {
+
+							&:nth-child(5n - #{$i}) {
+								width: $i * 20%;
+							}
+						}
+					}				
+
+				}
+			}
+		}
+
+		// view : 04
+		.view#view-04 {
+
+			z-index: 5;
+			//background-color: darken( $clr-bg, 2% );			
+
+			// structure : 01
+			.structure-01 {
+
+				height: 75%;
+				width: 60%;
+				z-index: 10;
+				background-color: darken( $clr-bg, 15% );
+				text-align: center;
+			}	
+
+			// rooftop structure : 01
+			.structure-01 .rooftop-structure-01 { 
+
+				display: inline-block;
+				position: absolute;
+				width: 75%;
+				height: 5%;
+				background-color: $clr-bg;
+				top: -5%;
+				margin-top: -3px;
+				left: 12.5%;
+				border: 3px solid $clr-fg;
+				border-bottom: none;
+
+				&::before {
+
+					content: '';
+					position: absolute;
+					display: block;
+					top: 0;
+					left: 0;
+					margin-top: 0;
+					margin-left: 0;
+					width: 100%;	
+					height: 50%;				
+					background-color: darken( $clr-bg, 15% );
+					border-bottom: 3px solid $clr-fg;
+				}
+				
+			}
+
+			// rooftop structure : 02
+			.structure-01 .rooftop-structure-02 { 
+
+				display: inline-block;
+				position: absolute;
+				width: 45%;
+				height: 10%;
+				background-color: $clr-bg;
+				top: -12.5%;
+				margin-top: -4px;
+				left: 27.5%;
+				border: 3px solid $clr-fg;
+				border-bottom: none;
+
+				&::before, &::after {
+
+					content: '';
+					position: absolute;
+					display: inline-block;
+					width: 3px;					
+					background-color: $clr-fg;
+
+					@include prefix((
+						border-radius: $base * .2 $base * .2 0 0,							
+					), webkit moz);
+				}
+
+				&::before {					
+					
+					height: 120%;
+					top: -120%;
+					margin-top: -3px;
+					left: 38%;
+				}
+
+				&::after {					
+					
+					height: 50%;
+					top: -50%;
+					margin-top: -3px;
+					left: 58%;
+				}
+			}
+
+			// side structure
+			.structure-01 .side-structure {
+
+				display: inline-flex;
+				flex-flow: column nowrap;
+				justify-content: space-evenly;				
+				position: absolute;
+				bottom: 0;				
+				width: 30%;
+				height: 92%;
+				border: 3px solid $clr-fg;
+				border-bottom: none;
+				background-color: $clr-bg;
+				@include prefix((
+					border-radius: $base * .2 $base * .2 0 0,							
+				), webkit moz);
+				z-index: 15;
+
+				hr {
+
+					margin: 0;
+					margin-left: auto;
+					margin-right: auto;					
+					height: 3px;
+					width: 80%;
+					background-color: $clr-fg;
+					opacity: 1;
+				}
+			}
+
+			// side structures
+
+			.structure-01 .side-structure.side-structure-01 {
+
+				left: 0;
+				margin-left: -12.5%;	
+			}
+
+			.structure-01 .side-structure.side-structure-02 {
+
+				right: 0;
+				margin-right: -12.5%;	
+			}
+
+			// center structures
+
+			.structure-01 .center-structure {
+
+				position: relative;
+				display: inline-flex;
+				flex-flow: row nowrap;
+				justify-content: space-evenly;
+				width: 45%;
+				height: 100%;
+				background-color: $clr-bg;
+				border-left: 3px solid $clr-fg;
+				border-right: 3px solid $clr-fg;
+				z-index: 5;	
+
+				hr {
+
+					margin: 0;					
+					height: 100%;
+					width: 3px;
+					background-color: $clr-fg;
+					opacity: 1;
+				}			
+			}
+
+			// base structure
+
+			.structure-01 .structure-base {
+
+				display: block;
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				height: 3%;
+				background-color: $clr-bg;
+				border-top: 3px solid $clr-fg;
+				z-index: 10;				
+			}
+				
+		}
+
+		// view : 05
+		.view#view-05 {
+			
+			//background-color: darken( $clr-bg, 4% );
+		}
+		
+		
+	}
+}
+

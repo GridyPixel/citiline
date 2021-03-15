@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- App CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/app.css">
+
+    <title>Windmill | Web Creatives</title>
+  </head>
+  <body>
+
+    <section id="windmill">     
+      
+
+      <!-- tower -->
+      <section class="tower">
+        <!-- wall -->
+        <div class="wall">
+          <!-- base -->
+          <span class="base"></span>
+        </div>
+        <!-- wall connector -->
+        <div class="wall-connector"></div>
+        <!-- roof -->
+        <div class="roof"></div>
+      </section>
+
+      <!-- ground -->
+      <section class="ground">        
+        <!-- grass -->
+        <span class="grass small"></span>
+        <!-- grass -->
+        <span class="grass big"></span>
+        <!-- grass -->
+        <span class="grass small"></span>
+        <!-- grass -->
+        <span class="grass big"></span>
+        <!-- base -->
+        <span class="base"></span>
+      </section>
+
+    </section>  
+
+    <script type="text/javascript">
+      
+      'use strict';  
+
+      function verifyDate ( dateToVerify ) {
+
+        // if the parameter date is not provided
+        // set the parameter to todays date       
+        dateToVerify = !dateToVerify ? new Date() : new Date(dateToVerify);
+
+        // all vars
+        var _30s,
+        _28or29s,
+        currentDay,
+        currentDate,
+        currentMonth,
+        currentYear,
+        firstDateOfCurrentMonth,
+        lastDateOfCurrentMonth,
+        firstDayOfCurrentMonth,
+        lastDayOfCurrentMonth,
+        distanceFirstDayToFirstSaturday,
+        secondWeekSaturdayDate,
+        fourthWeekSaturdayDate;
+
+        // day countwise month collection
+        // in JS, months are indexed from 0-11
+        // e.g 0 == 'January', 3 == 'April'...so on
+        _30s = [ 3, 5, 8, 10 ];
+        _28or29s = [ 1 ];
+
+        // current day / today 
+        currentDay = dateToVerify;
+        currentDate = currentDay.getDate();
+        currentMonth = currentDay.getMonth();
+        currentYear = currentDay.getFullYear();
+
+        // default first date of any month
+        firstDateOfCurrentMonth = 1;
+
+        // default last date of any month
+        // note : this will be updated based on current month
+        lastDateOfCurrentMonth = 31;
+
+        // update the last date of the current
+        // month based on month using _30s and _28or29s collection
+        lastDateOfCurrentMonth = _30s.includes( currentMonth ) || _28or29s.includes( currentMonth ) 
+                ? _30s.includes( currentMonth ) ? 30 : !(currentYear%4) ? 29 : 28
+                : lastDateOfCurrentMonth;
+
+        // date object of first date of current month
+        firstDayOfCurrentMonth = new Date( currentYear, currentMonth, firstDateOfCurrentMonth );
+
+        // date object of last date of current month
+        lastDayOfCurrentMonth = new Date( currentYear, currentMonth, lastDateOfCurrentMonth );
+
+        // this calculates the days to skip
+        // between first day of current month and first weeks saturday
+        distanceFirstDayToFirstSaturday = 7 - firstDayOfCurrentMonth.getDay();
+
+        // get date for second week saturday
+        secondWeekSaturdayDate = distanceFirstDayToFirstSaturday + (7 * 1);
+
+        // get date for fourth week saturday
+        fourthWeekSaturdayDate = distanceFirstDayToFirstSaturday + (7 * 3);
+
+        // return truthy value that indicates
+        // if the given/provided date is second or fourth saturday
+        // of the current or given month
+        return currentDate == secondWeekSaturdayDate 
+                || currentDate == fourthWeekSaturdayDate;
+
+      }
+
+      // format to test dates as follow,
+      // test 01 : 'September 26, 2020'
+      // test 02 : 'December 12, 2020'
+      // test 03 : 'December 26, 2020' and so on...      
+      // example : var dateToTest = 'December 26, 2020';
+      // defaults to todays date if no string value provided.
+      var dateToTest;
+
+      var isSecondOrFourthSaturday = verifyDate( dateToTest );
+
+      alert( 'Is second or fourth saturday ==> ' + isSecondOrFourthSaturday );
+      
+
+      
+    </script>  
+
+  </body>
+</html>
