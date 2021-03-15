@@ -1,5 +1,6 @@
 html, body {
-  background-color: white; }
+  background-color: white;
+}
 
 #scene-wrapper {
   position: relative;
@@ -7,7 +8,8 @@ html, body {
   background: transparent;
   overflow: hidden;
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+}
 
 #scene-wrapper #scene {
   display: flex;
@@ -19,322 +21,476 @@ html, body {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 100%; }
-  #scene-wrapper #scene #section-land {
-    position: relative;
-    display: block;
-    background-color: transparent;
-    width: 80%;
-    height: 10%;
-    border-top: 3px solid #262626;
-    order: 2; }
-  #scene-wrapper #scene #section-city {
-    position: relative;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    background-color: transparent;
-    width: 80%;
-    height: 90%;
-    order: 1; }
-    #scene-wrapper #scene #section-city .view {
-      position: relative;
-      display: block;
-      width: 20%; }
-    #scene-wrapper #scene #section-city .view .structure-proto {
-      position: absolute;
-      display: inline-block;
-      bottom: 0;
-      border: 3px solid #262626;
-      border-bottom: 0;
-      background-color: white;
-      -webkit-border-radius: 3.2px 3.2px 0 0;
-      -moz-border-radius: 3.2px 3.2px 0 0;
-      border-radius: 3.2px 3.2px 0 0; }
-    #scene-wrapper #scene #section-city .view#view-02 {
-      z-index: 5;
-      margin-right: -6%; }
-      #scene-wrapper #scene #section-city .view#view-02 .structure-01 {
-        height: 30%;
-        width: 15%;
-        left: -7.5%;
-        z-index: 10; }
-        #scene-wrapper #scene #section-city .view#view-02 .structure-01 .center-structure {
-          position: relative;
-          display: inline-flex;
-          flex-flow: column nowrap;
-          width: 100%;
-          height: 90%;
-          left: 0;
-          top: 0;
-          background-color: white;
-          z-index: 5; }
-          #scene-wrapper #scene #section-city .view#view-02 .structure-01 .center-structure hr {
-            margin: 20% 0 0 0;
-            height: 3px;
-            width: 100%;
-            background-color: #262626;
-            opacity: 1;
-            -webkit-border-radius: 0;
-            -moz-border-radius: 0;
-            border-radius: 0; }
-            #scene-wrapper #scene #section-city .view#view-02 .structure-01 .center-structure hr:nth-child(5n - 1) {
-              width: 20%; }
-            #scene-wrapper #scene #section-city .view#view-02 .structure-01 .center-structure hr:nth-child(5n - 2) {
-              width: 40%; }
-            #scene-wrapper #scene #section-city .view#view-02 .structure-01 .center-structure hr:nth-child(5n - 3) {
-              width: 60%; }
-            #scene-wrapper #scene #section-city .view#view-02 .structure-01 .center-structure hr:nth-child(5n - 4) {
-              width: 80%; }
-      #scene-wrapper #scene #section-city .view#view-02 .structure-02 {
-        height: 50%;
-        width: 50%;
-        z-index: 5; }
-        #scene-wrapper #scene #section-city .view#view-02 .structure-02 .rooftop-structure {
-          position: absolute;
-          display: inline-block;
-          width: 50%;
-          height: 6%;
-          left: 25%;
-          top: -6%;
-          background-color: #d9d9d9;
-          border: 3px solid #262626;
-          -webkit-border-radius: 160px 160px 64px 64px;
-          -moz-border-radius: 160px 160px 64px 64px;
-          border-radius: 160px 160px 64px 64px; }
-          #scene-wrapper #scene #section-city .view#view-02 .structure-02 .rooftop-structure::before {
-            content: '';
-            position: absolute;
-            display: inline-block;
-            width: 3px;
-            height: 800%;
-            top: -800%;
-            left: 50%;
-            margin-left: -1.5px;
-            background-color: #262626; }
-          #scene-wrapper #scene #section-city .view#view-02 .structure-02 .rooftop-structure::after {
-            content: '';
-            position: absolute;
-            display: inline-block;
-            width: 30%;
-            height: 3px;
-            top: -800%;
-            left: 50%;
-            margin-left: -15%;
-            background-color: #262626; }
-    #scene-wrapper #scene #section-city .view#view-03 {
-      z-index: 10;
-      margin-right: -2%; }
-      #scene-wrapper #scene #section-city .view#view-03 .structure-01 {
-        height: 32%;
-        width: 60%;
-        left: -30%;
-        z-index: 10; }
-        #scene-wrapper #scene #section-city .view#view-03 .structure-01 .center-structure {
-          position: relative;
-          display: inline-flex;
-          flex-flow: column nowrap;
-          justify-content: space-evenly;
-          width: 70%;
-          height: 65%;
-          left: 15%;
-          top: 12%;
-          background-color: white;
-          border-top: 3px solid #262626;
-          border-bottom: 3px solid #262626;
-          z-index: 5; }
-          #scene-wrapper #scene #section-city .view#view-03 .structure-01 .center-structure hr {
-            margin: 0;
-            height: 3px;
-            width: 100%;
-            background-color: #262626;
-            opacity: 1;
-            -webkit-border-radius: 0;
-            -moz-border-radius: 0;
-            border-radius: 0; }
-        #scene-wrapper #scene #section-city .view#view-03 .structure-01 .base-structure {
-          position: absolute;
-          display: block;
-          bottom: 0;
-          left: 0;
-          height: 6%;
-          width: 100%;
-          background-color: #d9d9d9;
-          border-top: 3px solid #262626; }
-      #scene-wrapper #scene #section-city .view#view-03 .structure-02 {
-        height: 60%;
-        width: 65%;
-        z-index: 5; }
-        #scene-wrapper #scene #section-city .view#view-03 .structure-02 .center-structure {
-          position: relative;
-          display: inline-flex;
-          flex-flow: row nowrap;
-          justify-content: space-evenly;
-          width: 70%;
-          height: 80%;
-          left: 15%;
-          top: 10%;
-          background-color: white;
-          border-left: 3px solid #262626;
-          border-right: 3px solid #262626;
-          z-index: 5; }
-          #scene-wrapper #scene #section-city .view#view-03 .structure-02 .center-structure hr {
-            margin: 0;
-            height: 100%;
-            width: 3px;
-            background-color: #262626;
-            opacity: 1;
-            -webkit-border-radius: 3.2px 3.2px 0 0;
-            -moz-border-radius: 3.2px 3.2px 0 0;
-            border-radius: 3.2px 3.2px 0 0; }
-      #scene-wrapper #scene #section-city .view#view-03 .structure-03 {
-        height: 45%;
-        width: 30%;
-        z-index: 15;
-        left: 65%;
-        margin-left: -3px; }
-        #scene-wrapper #scene #section-city .view#view-03 .structure-03 .center-structure {
-          position: relative;
-          display: inline-flex;
-          flex-flow: column nowrap;
-          width: 100%;
-          height: 90%;
-          left: 0;
-          top: 0;
-          background-color: white;
-          z-index: 5; }
-          #scene-wrapper #scene #section-city .view#view-03 .structure-03 .center-structure hr {
-            margin: 15% 0 0 0;
-            height: 3px;
-            width: 100%;
-            background-color: #262626;
-            opacity: 1;
-            -webkit-border-radius: 0;
-            -moz-border-radius: 0;
-            border-radius: 0; }
-            #scene-wrapper #scene #section-city .view#view-03 .structure-03 .center-structure hr:nth-child(5n - 1) {
-              width: 20%; }
-            #scene-wrapper #scene #section-city .view#view-03 .structure-03 .center-structure hr:nth-child(5n - 2) {
-              width: 40%; }
-            #scene-wrapper #scene #section-city .view#view-03 .structure-03 .center-structure hr:nth-child(5n - 3) {
-              width: 60%; }
-            #scene-wrapper #scene #section-city .view#view-03 .structure-03 .center-structure hr:nth-child(5n - 4) {
-              width: 80%; }
-    #scene-wrapper #scene #section-city .view#view-04 {
-      z-index: 5; }
-      #scene-wrapper #scene #section-city .view#view-04 .structure-01 {
-        height: 75%;
-        width: 60%;
-        z-index: 10;
-        background-color: #d9d9d9;
-        text-align: center; }
-      #scene-wrapper #scene #section-city .view#view-04 .structure-01 .rooftop-structure-01 {
-        display: inline-block;
-        position: absolute;
-        width: 75%;
-        height: 5%;
-        background-color: white;
-        top: -5%;
-        margin-top: -3px;
-        left: 12.5%;
-        border: 3px solid #262626;
-        border-bottom: none; }
-        #scene-wrapper #scene #section-city .view#view-04 .structure-01 .rooftop-structure-01::before {
-          content: '';
-          position: absolute;
-          display: block;
-          top: 0;
-          left: 0;
-          margin-top: 0;
-          margin-left: 0;
-          width: 100%;
-          height: 50%;
-          background-color: #d9d9d9;
-          border-bottom: 3px solid #262626; }
-      #scene-wrapper #scene #section-city .view#view-04 .structure-01 .rooftop-structure-02 {
-        display: inline-block;
-        position: absolute;
-        width: 45%;
-        height: 10%;
-        background-color: white;
-        top: -12.5%;
-        margin-top: -4px;
-        left: 27.5%;
-        border: 3px solid #262626;
-        border-bottom: none; }
-        #scene-wrapper #scene #section-city .view#view-04 .structure-01 .rooftop-structure-02::before, #scene-wrapper #scene #section-city .view#view-04 .structure-01 .rooftop-structure-02::after {
-          content: '';
-          position: absolute;
-          display: inline-block;
-          width: 3px;
-          background-color: #262626;
-          -webkit-border-radius: 3.2px 3.2px 0 0;
-          -moz-border-radius: 3.2px 3.2px 0 0;
-          border-radius: 3.2px 3.2px 0 0; }
-        #scene-wrapper #scene #section-city .view#view-04 .structure-01 .rooftop-structure-02::before {
-          height: 120%;
-          top: -120%;
-          margin-top: -3px;
-          left: 38%; }
-        #scene-wrapper #scene #section-city .view#view-04 .structure-01 .rooftop-structure-02::after {
-          height: 50%;
-          top: -50%;
-          margin-top: -3px;
-          left: 58%; }
-      #scene-wrapper #scene #section-city .view#view-04 .structure-01 .side-structure {
-        display: inline-flex;
-        flex-flow: column nowrap;
-        justify-content: space-evenly;
-        position: absolute;
-        bottom: 0;
-        width: 30%;
-        height: 92%;
-        border: 3px solid #262626;
-        border-bottom: none;
-        background-color: white;
-        -webkit-border-radius: 3.2px 3.2px 0 0;
-        -moz-border-radius: 3.2px 3.2px 0 0;
-        border-radius: 3.2px 3.2px 0 0;
-        z-index: 15; }
-        #scene-wrapper #scene #section-city .view#view-04 .structure-01 .side-structure hr {
-          margin: 0;
-          margin-left: auto;
-          margin-right: auto;
-          height: 3px;
-          width: 80%;
-          background-color: #262626;
-          opacity: 1; }
-      #scene-wrapper #scene #section-city .view#view-04 .structure-01 .side-structure.side-structure-01 {
-        left: 0;
-        margin-left: -12.5%; }
-      #scene-wrapper #scene #section-city .view#view-04 .structure-01 .side-structure.side-structure-02 {
-        right: 0;
-        margin-right: -12.5%; }
-      #scene-wrapper #scene #section-city .view#view-04 .structure-01 .center-structure {
-        position: relative;
-        display: inline-flex;
-        flex-flow: row nowrap;
-        justify-content: space-evenly;
-        width: 45%;
-        height: 100%;
-        background-color: white;
-        border-left: 3px solid #262626;
-        border-right: 3px solid #262626;
-        z-index: 5; }
-        #scene-wrapper #scene #section-city .view#view-04 .structure-01 .center-structure hr {
-          margin: 0;
-          height: 100%;
-          width: 3px;
-          background-color: #262626;
-          opacity: 1; }
-      #scene-wrapper #scene #section-city .view#view-04 .structure-01 .structure-base {
-        display: block;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 3%;
-        background-color: white;
-        border-top: 3px solid #262626;
-        z-index: 10; }
+  height: 100%;
+}
+#scene-wrapper #scene #section-land {
+  position: relative;
+  display: block;
+  background-color: white;
+  width: 80%;
+  height: 10%;
+  border-top: 3px solid #262626;
+  order: 2;
+  z-index: 10;
+}
+#scene-wrapper #scene #section-city {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  background-color: transparent;
+  width: 80%;
+  height: 90%;
+  order: 1;
+  z-index: 5;
+}
+#scene-wrapper #scene #section-city .view {
+  position: relative;
+  display: block;
+  width: 20%;
+}
+#scene-wrapper #scene #section-city .view .structure-proto {
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  border: 3px solid #262626;
+  border-bottom: 0;
+  background-color: white;
+  -webkit-border-radius: 3.2px 3.2px 0 0;
+  -moz-border-radius: 3.2px 3.2px 0 0;
+  border-radius: 3.2px 3.2px 0 0;
+}
+#scene-wrapper #scene #section-city .view#view-02 {
+  z-index: 5;
+  margin-right: -6%;
+}
+#scene-wrapper #scene #section-city .view#view-02 .structure-01 {
+  height: 30%;
+  width: 15%;
+  left: -7.5%;
+  z-index: 10;
+}
+#scene-wrapper #scene #section-city .view#view-02 .structure-01 .structure-shadow {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  background-color: rgba(38, 38, 38, 0.09);
+  z-index: 15;
+}
+#scene-wrapper #scene #section-city .view#view-02 .structure-01 .center-structure {
+  position: relative;
+  display: inline-flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  height: 90%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+#scene-wrapper #scene #section-city .view#view-02 .structure-01 .center-structure hr {
+  margin: 20% 0 0 0;
+  height: 3px;
+  width: 100%;
+  background-color: #262626;
+  opacity: 1;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+#scene-wrapper #scene #section-city .view#view-02 .structure-01 .center-structure hr:nth-child(5n-1) {
+  width: 20%;
+}
+#scene-wrapper #scene #section-city .view#view-02 .structure-01 .center-structure hr:nth-child(5n-2) {
+  width: 40%;
+}
+#scene-wrapper #scene #section-city .view#view-02 .structure-01 .center-structure hr:nth-child(5n-3) {
+  width: 60%;
+}
+#scene-wrapper #scene #section-city .view#view-02 .structure-01 .center-structure hr:nth-child(5n-4) {
+  width: 80%;
+}
+#scene-wrapper #scene #section-city .view#view-02 .structure-02 {
+  height: 50%;
+  width: 50%;
+  z-index: 5;
+}
+#scene-wrapper #scene #section-city .view#view-02 .structure-02 .structure-shadow {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 100%;
+  background-color: rgba(38, 38, 38, 0.09);
+  z-index: 15;
+}
+#scene-wrapper #scene #section-city .view#view-02 .structure-02 .rooftop-structure {
+  position: absolute;
+  display: inline-block;
+  width: 50%;
+  height: 6%;
+  left: 25%;
+  top: -6%;
+  background-color: #d9d9d9;
+  border: 3px solid #262626;
+  z-index: 10;
+  -webkit-border-radius: 160px 160px 64px 64px;
+  -moz-border-radius: 160px 160px 64px 64px;
+  border-radius: 160px 160px 64px 64px;
+}
+#scene-wrapper #scene #section-city .view#view-02 .structure-02 .rooftop-structure .structure-shadow {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  background-color: rgba(38, 38, 38, 0.09);
+  z-index: 15;
+}
+#scene-wrapper #scene #section-city .view#view-02 .structure-02 .rooftop-structure::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 3px;
+  height: 800%;
+  top: -800%;
+  left: 50%;
+  margin-left: -1.5px;
+  background-color: #262626;
+}
+#scene-wrapper #scene #section-city .view#view-02 .structure-02 .rooftop-structure::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 30%;
+  height: 3px;
+  top: -800%;
+  left: 50%;
+  margin-left: -15%;
+  background-color: #262626;
+}
+#scene-wrapper #scene #section-city .view#view-02 .structure-02 .center-structure {
+  position: absolute;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  z-index: 10;
+}
+#scene-wrapper #scene #section-city .view#view-02 .structure-02 .center-structure span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 5%;
+  border-top: 3px solid #262626;
+}
+#scene-wrapper #scene #section-city .view#view-02 .structure-02 .center-structure span:nth-child(5n-5) {
+  height: 10%;
+  background-color: #d9d9d9;
+}
+#scene-wrapper #scene #section-city .view#view-03 {
+  z-index: 10;
+  margin-right: -2%;
+}
+#scene-wrapper #scene #section-city .view#view-03 .structure-01 {
+  height: 32%;
+  width: 60%;
+  left: -30%;
+  z-index: 10;
+}
+#scene-wrapper #scene #section-city .view#view-03 .structure-01 .structure-shadow {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 7%;
+  height: 100%;
+  background-color: rgba(38, 38, 38, 0.09);
+  z-index: 15;
+}
+#scene-wrapper #scene #section-city .view#view-03 .structure-01 .center-structure {
+  position: relative;
+  display: inline-flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  width: 70%;
+  height: 65%;
+  left: 15%;
+  top: 12%;
+  background-color: white;
+  border-top: 3px solid #262626;
+  border-bottom: 3px solid #262626;
+  z-index: 5;
+}
+#scene-wrapper #scene #section-city .view#view-03 .structure-01 .center-structure hr {
+  margin: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #262626;
+  opacity: 1;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+#scene-wrapper #scene #section-city .view#view-03 .structure-01 .base-structure {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  height: 6%;
+  width: 100%;
+  background-color: #d9d9d9;
+  border-top: 3px solid #262626;
+}
+#scene-wrapper #scene #section-city .view#view-03 .structure-02 {
+  height: 60%;
+  width: 65%;
+  z-index: 5;
+}
+#scene-wrapper #scene #section-city .view#view-03 .structure-02 .structure-shadow {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 7%;
+  height: 100%;
+  background-color: rgba(38, 38, 38, 0.09);
+  z-index: 15;
+}
+#scene-wrapper #scene #section-city .view#view-03 .structure-02 .center-structure {
+  position: relative;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  width: 70%;
+  height: 80%;
+  left: 15%;
+  top: 10%;
+  background-color: white;
+  border-left: 3px solid #262626;
+  border-right: 3px solid #262626;
+  z-index: 5;
+}
+#scene-wrapper #scene #section-city .view#view-03 .structure-02 .center-structure hr {
+  margin: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #262626;
+  opacity: 1;
+  -webkit-border-radius: 3.2px 3.2px 0 0;
+  -moz-border-radius: 3.2px 3.2px 0 0;
+  border-radius: 3.2px 3.2px 0 0;
+}
+#scene-wrapper #scene #section-city .view#view-03 .structure-03 {
+  height: 45%;
+  width: 30%;
+  z-index: 15;
+  left: 65%;
+  margin-left: -3px;
+}
+#scene-wrapper #scene #section-city .view#view-03 .structure-03 .structure-shadow {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 100%;
+  background-color: rgba(38, 38, 38, 0.09);
+  z-index: 15;
+}
+#scene-wrapper #scene #section-city .view#view-03 .structure-03 .center-structure {
+  position: relative;
+  display: inline-flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  height: 90%;
+  left: 0;
+  top: 0;
+  background-color: white;
+  z-index: 5;
+}
+#scene-wrapper #scene #section-city .view#view-03 .structure-03 .center-structure hr {
+  margin: 15% 0 0 0;
+  height: 3px;
+  width: 100%;
+  background-color: #262626;
+  opacity: 1;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+#scene-wrapper #scene #section-city .view#view-03 .structure-03 .center-structure hr:nth-child(5n-1) {
+  width: 20%;
+}
+#scene-wrapper #scene #section-city .view#view-03 .structure-03 .center-structure hr:nth-child(5n-2) {
+  width: 40%;
+}
+#scene-wrapper #scene #section-city .view#view-03 .structure-03 .center-structure hr:nth-child(5n-3) {
+  width: 60%;
+}
+#scene-wrapper #scene #section-city .view#view-03 .structure-03 .center-structure hr:nth-child(5n-4) {
+  width: 80%;
+}
+#scene-wrapper #scene #section-city .view#view-04 {
+  z-index: 5;
+}
+#scene-wrapper #scene #section-city .view#view-04 .structure-01 {
+  height: 75%;
+  width: 60%;
+  z-index: 10;
+  background-color: #d9d9d9;
+  text-align: center;
+}
+#scene-wrapper #scene #section-city .view#view-04 .structure-01 .rooftop-structure-01 {
+  display: inline-block;
+  position: absolute;
+  width: 75%;
+  height: 5%;
+  background-color: white;
+  top: -5%;
+  margin-top: -3px;
+  left: 12.5%;
+  border: 3px solid #262626;
+  border-bottom: none;
+}
+#scene-wrapper #scene #section-city .view#view-04 .structure-01 .rooftop-structure-01::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  margin-top: 0;
+  margin-left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #d9d9d9;
+  border-bottom: 3px solid #262626;
+}
+#scene-wrapper #scene #section-city .view#view-04 .structure-01 .rooftop-structure-02 {
+  display: inline-block;
+  position: absolute;
+  width: 45%;
+  height: 10%;
+  background-color: white;
+  top: -12.5%;
+  margin-top: -4px;
+  left: 27.5%;
+  border: 3px solid #262626;
+  border-bottom: none;
+}
+#scene-wrapper #scene #section-city .view#view-04 .structure-01 .rooftop-structure-02::before, #scene-wrapper #scene #section-city .view#view-04 .structure-01 .rooftop-structure-02::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 3px;
+  background-color: #262626;
+  -webkit-border-radius: 3.2px 3.2px 0 0;
+  -moz-border-radius: 3.2px 3.2px 0 0;
+  border-radius: 3.2px 3.2px 0 0;
+}
+#scene-wrapper #scene #section-city .view#view-04 .structure-01 .rooftop-structure-02::before {
+  height: 120%;
+  top: -120%;
+  margin-top: -3px;
+  left: 38%;
+}
+#scene-wrapper #scene #section-city .view#view-04 .structure-01 .rooftop-structure-02::after {
+  height: 50%;
+  top: -50%;
+  margin-top: -3px;
+  left: 58%;
+}
+#scene-wrapper #scene #section-city .view#view-04 .structure-01 .rooftop-structure-02 .structure-shadow {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  background-color: rgba(38, 38, 38, 0.09);
+  z-index: 15;
+}
+#scene-wrapper #scene #section-city .view#view-04 .structure-01 .side-structure {
+  display: inline-flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 0;
+  width: 30%;
+  height: 92%;
+  border: 3px solid #262626;
+  border-bottom: none;
+  background-color: white;
+  -webkit-border-radius: 3.2px 3.2px 0 0;
+  -moz-border-radius: 3.2px 3.2px 0 0;
+  border-radius: 3.2px 3.2px 0 0;
+  z-index: 15;
+}
+#scene-wrapper #scene #section-city .view#view-04 .structure-01 .side-structure hr {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 3px;
+  width: 80%;
+  background-color: #262626;
+  opacity: 1;
+}
+#scene-wrapper #scene #section-city .view#view-04 .structure-01 .side-structure .structure-shadow {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  background-color: rgba(38, 38, 38, 0.09);
+  z-index: 15;
+}
+#scene-wrapper #scene #section-city .view#view-04 .structure-01 .side-structure.side-structure-01 {
+  left: 0;
+  margin-left: -12.5%;
+}
+#scene-wrapper #scene #section-city .view#view-04 .structure-01 .side-structure.side-structure-02 {
+  right: 0;
+  margin-right: -12.5%;
+  -webkit-box-shadow: -3.2px 12.8px 0 3.2px rgba(38, 38, 38, 0.2);
+  -moz-box-shadow: -3.2px 12.8px 0 3.2px rgba(38, 38, 38, 0.2);
+  box-shadow: -3.2px 12.8px 0 3.2px rgba(38, 38, 38, 0.2);
+}
+#scene-wrapper #scene #section-city .view#view-04 .structure-01 .center-structure {
+  position: relative;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  width: 45%;
+  height: 100%;
+  background-color: white;
+  border-left: 3px solid #262626;
+  border-right: 3px solid #262626;
+  z-index: 5;
+}
+#scene-wrapper #scene #section-city .view#view-04 .structure-01 .center-structure hr {
+  margin: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #262626;
+  opacity: 1;
+}
+#scene-wrapper #scene #section-city .view#view-04 .structure-01 .structure-base {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3%;
+  background-color: white;
+  border-top: 3px solid #262626;
+  z-index: 10;
+}
 
 /*# sourceMappingURL=app.css.map */
